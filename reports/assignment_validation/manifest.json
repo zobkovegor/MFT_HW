@@ -1,0 +1,288 @@
+{
+  "created_utc": "2026-10-06T17:04:14.636407+00:00",
+  "config": {
+    "created_utc": "2026-10-06T16:41:23.030415+00:00",
+    "report_period": "2019-01-01 through 2019-12-31",
+    "training_period": "2015-01-01 through 2018-12-31",
+    "selected_on_validation": true,
+    "independent_holdout_claim": false,
+    "user_request": "Use validation-year performance as the assignment backtest",
+    "risk": {
+      "initial_capital": 3000000.0,
+      "risk_fraction": 0.005,
+      "per_asset_margin": 0.3,
+      "total_margin": 0.6,
+      "volume_participation": 0.01,
+      "oi_participation": 0.01,
+      "volatility_floor": 0.005,
+      "margin_rate": 0.2
+    },
+    "slippage_ticks_per_side": 1,
+    "fee_scenario": "literal supplied Excel 2026, not historical fee reconstruction",
+    "candidates": [
+      {
+        "symbol": "NI",
+        "family": "daily_trend",
+        "timeframe": 5,
+        "lookback": 20,
+        "holding": 0,
+        "quantile": 0.5,
+        "side": "short",
+        "candidate_id": "NI:daily_trend:5",
+        "train_threshold": 0.04988312817769577
+      },
+      {
+        "symbol": "AU",
+        "family": "daily_reversal",
+        "timeframe": 5,
+        "lookback": 60,
+        "holding": 0,
+        "quantile": 0.5,
+        "side": "long",
+        "candidate_id": "AU:daily_reversal:5",
+        "train_threshold": 0.025293401868763103
+      },
+      {
+        "symbol": "T",
+        "family": "opening_reversal",
+        "timeframe": 5,
+        "lookback": 1,
+        "holding": 0,
+        "quantile": 0.8,
+        "side": "long",
+        "candidate_id": "T:opening_reversal:5",
+        "train_threshold": 0.0010087025512315775
+      },
+      {
+        "symbol": "RU",
+        "family": "daily_reversal",
+        "timeframe": 5,
+        "lookback": 20,
+        "holding": 0,
+        "quantile": 0.5,
+        "side": "short",
+        "candidate_id": "RU:daily_reversal:5",
+        "train_threshold": 0.05294534712064446
+      },
+      {
+        "symbol": "OI",
+        "family": "reversal",
+        "timeframe": 30,
+        "lookback": 1,
+        "holding": 1,
+        "quantile": 0.95,
+        "side": "short",
+        "candidate_id": "OI:reversal:30",
+        "train_threshold": 0.00535467701440056
+      },
+      {
+        "symbol": "CY",
+        "family": "reversal",
+        "timeframe": 30,
+        "lookback": 1,
+        "holding": 0,
+        "quantile": 0.8,
+        "side": "short",
+        "candidate_id": "CY:reversal:30",
+        "train_threshold": 0.002739849945781402
+      },
+      {
+        "symbol": "SM",
+        "family": "reversal",
+        "timeframe": 5,
+        "lookback": 1,
+        "holding": 4,
+        "quantile": 0.95,
+        "side": "short",
+        "candidate_id": "SM:reversal:5",
+        "train_threshold": 0.005638890373764743
+      },
+      {
+        "symbol": "AP",
+        "family": "momentum",
+        "timeframe": 5,
+        "lookback": 4,
+        "holding": 0,
+        "quantile": 0.95,
+        "side": "long",
+        "candidate_id": "AP:momentum:5",
+        "train_threshold": 0.008897899682711945
+      },
+      {
+        "symbol": "ZN",
+        "family": "daily_opening_momentum",
+        "timeframe": 5,
+        "lookback": 1,
+        "holding": 0,
+        "quantile": 0.5,
+        "side": "short",
+        "candidate_id": "ZN:daily_opening_momentum:5",
+        "train_threshold": 0.005425878664487294
+      },
+      {
+        "symbol": "JD",
+        "family": "daily_trend",
+        "timeframe": 5,
+        "lookback": 20,
+        "holding": 0,
+        "quantile": 0.5,
+        "side": "short",
+        "candidate_id": "JD:daily_trend:5",
+        "train_threshold": 0.035225484968779794
+      },
+      {
+        "symbol": "SN",
+        "family": "opening_reversal",
+        "timeframe": 30,
+        "lookback": 1,
+        "holding": 0,
+        "quantile": 0.8,
+        "side": "short",
+        "candidate_id": "SN:opening_reversal:30",
+        "train_threshold": 0.003669107135957985
+      },
+      {
+        "symbol": "SF",
+        "family": "daily_opening_reversal",
+        "timeframe": 5,
+        "lookback": 1,
+        "holding": 0,
+        "quantile": 0.5,
+        "side": "short",
+        "candidate_id": "SF:daily_opening_reversal:5",
+        "train_threshold": 0.004754030048924551
+      },
+      {
+        "symbol": "AL",
+        "family": "daily_opening_momentum",
+        "timeframe": 5,
+        "lookback": 1,
+        "holding": 0,
+        "quantile": 0.5,
+        "side": "short",
+        "candidate_id": "AL:daily_opening_momentum:5",
+        "train_threshold": 0.0032697548762871675
+      },
+      {
+        "symbol": "CF",
+        "family": "daily_opening_momentum",
+        "timeframe": 5,
+        "lookback": 1,
+        "holding": 0,
+        "quantile": 0.5,
+        "side": "short",
+        "candidate_id": "CF:daily_opening_momentum:5",
+        "train_threshold": 0.0034456355283307705
+      }
+    ]
+  },
+  "data": [
+    {
+      "symbol": "NI",
+      "path": "data/NI9999.XSGE.csv",
+      "first": "2015-03-26 21:01:00",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "98576b64c2e40d06cc998d404ede316c241f7efae68156db2a9aefbb49d53089"
+    },
+    {
+      "symbol": "AU",
+      "path": "data/AU9999.XSGE.csv",
+      "first": "2008-01-10 09:01:00",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "f542d7af8f2c422fe52e307e6e0ae198470d973dc50d2789f1dd02f20a038caf"
+    },
+    {
+      "symbol": "T",
+      "path": "data/T9999.CCFX.csv",
+      "first": "2015-03-20 09:16:00",
+      "last": "2021-10-18 15:15:00",
+      "sha256": "4045b41d3a6ea7bc477fea1f809a907c3f799155204093dc7db6e6c363f0f1e1"
+    },
+    {
+      "symbol": "RU",
+      "path": "data/RU9999.XSGE.csv",
+      "first": "2005-01-04 09:01:00",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "f6ef5f5293bf031283b6ae7f762dcd61b2102213a777b3d67d670ff3fe7c0620"
+    },
+    {
+      "symbol": "OI",
+      "path": "data/OI9999.XZCE.csv",
+      "first": "2012-07-16 09:01:00",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "2ac4626c3c58932db5995a5e9c885432f47af2d62dadcacb00af941ef7ecfd2b"
+    },
+    {
+      "symbol": "CY",
+      "path": "data/CY9999.XZCE.csv",
+      "first": "2017-08-18 09:01:00",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "3275f76f9bb09ad38800b2e453318f734d56615566e84fb1bb1b5fe52dd95db2"
+    },
+    {
+      "symbol": "SM",
+      "path": "data/SM9999.XZCE.csv",
+      "first": "2014-08-08 09:01:00",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "ee55f521d7275e45ac4b88ab0b88ffda2badc4c176d0a0c226d14e852c6d3dd4"
+    },
+    {
+      "symbol": "AP",
+      "path": "data/AP9999.XZCE.csv",
+      "first": "2017-12-22 09:01:00",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "9613be6b39e21c710e8182dafb8bf53e3dff252211317f72d152c47b066392d2"
+    },
+    {
+      "symbol": "ZN",
+      "path": "data/ZN9999.XSGE.csv",
+      "first": "2007-03-26 09:01:00",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "bdf63eaf039f10e56d614dad2815e2df70f7214c1cadd3a2db2a7bacc387e3e9"
+    },
+    {
+      "symbol": "JD",
+      "path": "data/JD9999.XDCE.csv",
+      "first": "2013-11-08 09:01:00",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "ea0a86d6bea33aec759bccddf95038af8f2cff24ead466479c0a7e374c0e03cd"
+    },
+    {
+      "symbol": "SN",
+      "path": "data/SN9999.XSGE.csv",
+      "first": "2015-03-26 21:01:00",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "45cb5f03ef51c6845655dd6a12ff741641f7f220943009d058d3d2d332a246c5"
+    },
+    {
+      "symbol": "SF",
+      "path": "data/SF9999.XZCE.csv",
+      "first": "2014-08-08 09:01:00",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "a65f65a13d6ea1114f81409e29380c4bf60734d2369cdc56a1a605d063a2e18e"
+    },
+    {
+      "symbol": "AL",
+      "path": "data/AL9999.XSGE.csv",
+      "first": "2005-01-04 09:01:00",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "11a47c98127da117ffa7e35255c1fa3752896b61f57e74efa0d337bd296b433d"
+    },
+    {
+      "symbol": "CF",
+      "path": "data/CF9999.XZCE.csv",
+      "first": "2005-01-04 09:01:00",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "5559fda0eb06ef3fb06eabbaa39e76c5cfca1db4db9563986395b9a0afef300c"
+    }
+  ],
+  "code_sha256": {
+    "/home/egorzobkov/cmf/MFT_HW/src/assignment_project.py": "7fc88c3130bb7fb7ac4d23817e3b946e3591a8a41d9e3f8fc6c13a720bc449a1",
+    "src/portfolio_engine.py": "758369b9dd0fc7ec08b36cba3277f7eb058eb53dafb335e67106ac0420593bbd",
+    "src/universe_research.py": "1c242c052ca05a2d74503d2da93ef4382f9a4bcf25869bce6f518b9b1d94c0cd",
+    "src/daily_universe_research.py": "4f9461acc69cacccac6603a16029eb414040808d5282c1a3e3a6626c001ed349",
+    "Futures Commission Schedule (All Exchanges).xlsx": "b781b5b29e733b8ae09858976bf49d8539db8bf1137e3c3ec269f0f0a31a2a94",
+    "configs/assignment_portfolio.json": "d1df2d70e97c5b3f5ff22bc66f906ad01f46bc06b6ed2de1a028510c60151442",
+    "configs/requirements.json": "ec63ee53b919ce4e9c1889cd60514bbbda168044925b5b5f9330743e694e72b0"
+  }
+}

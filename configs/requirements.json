@@ -1,0 +1,13 @@
+{
+  "initial_capital_cny": 3000000,
+  "annualized_return_strictly_above": 0.20,
+  "sharpe_strictly_above": 1.5,
+  "max_drawdown_strictly_below": 0.15,
+  "optional_win_rate_strictly_above": 0.50,
+  "evaluation_year": 2019,
+  "evaluation_selection": "User requested validation-selected assignment backtest; no independent holdout claim",
+  "data": "Provided 1-minute futures OHLCV",
+  "deliverables": ["strategy logic", "Python code", "performance report"],
+  "requirement_source": "User-provided assignment screenshots, 2026-10-06",
+  "reference_ideas": "User-provided MFT Report_Alex K (1).pdf; claims independently tested, not assumed"
+}

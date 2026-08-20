@@ -1,0 +1,2 @@
+symbol,timeframe,lookback,holding,quantile,family,side,threshold,train_trades,train_mean_bps,train_t_stat,train_win_pct,validation_trades,validation_mean_bps,validation_t_stat,validation_win_pct,selection_score
+RI,5,1,1,0.99,reversal,long,0.009214743589743613,196,10.803898958105739,1.8817511149922534,16.3265306122449,31,6.751623697764532,0.4449068713921452,25.806451612903224,0.4449068713921452

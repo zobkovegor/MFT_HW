@@ -1,0 +1,76 @@
+{
+  "created_utc": "2026-10-06T16:36:08.711446+00:00",
+  "config": {
+    "created_utc": "2026-10-06T16:36:02.093465+00:00",
+    "retrospective": true,
+    "earlier_test_seen": true,
+    "test_used_in_weight_function": false,
+    "primary_book": "training_loss_weighted",
+    "comparison_book": "maximin_single",
+    "single_symbol": "AU",
+    "risk": {
+      "initial_capital": 3000000.0,
+      "risk_fraction": 0.005,
+      "per_asset_margin": 0.2,
+      "total_margin": 0.4,
+      "volume_participation": 0.01,
+      "oi_participation": 0.01,
+      "volatility_floor": 0.005,
+      "margin_rate": 0.2
+    },
+    "weights": {
+      "NI": 0.697767477533092,
+      "AU": 1.0
+    },
+    "candidates": [
+      {
+        "symbol": "NI",
+        "family": "daily_trend",
+        "timeframe": 5,
+        "lookback": 20,
+        "holding": 0,
+        "quantile": 0.5,
+        "side": "short",
+        "candidate_id": "NI:daily_trend:5",
+        "train_threshold": 0.04988312817769577,
+        "revision": "cost_screen"
+      },
+      {
+        "symbol": "AU",
+        "family": "daily_reversal",
+        "timeframe": 5,
+        "lookback": 60,
+        "holding": 0,
+        "quantile": 0.5,
+        "side": "long",
+        "candidate_id": "AU:daily_reversal:5",
+        "train_threshold": 0.025293401868763103,
+        "revision": "cost_screen"
+      }
+    ],
+    "allocation": "weight = smallest worst-year loss severity / asset worst-year loss severity; train 2015-18 at 3 ticks per side; weights <= 1; no risk increase"
+  },
+  "data": [
+    {
+      "symbol": "NI",
+      "last": "2021-10-18 15:00:00",
+      "file": "data/NI9999.XSGE.csv",
+      "sha256": "98576b64c2e40d06cc998d404ede316c241f7efae68156db2a9aefbb49d53089"
+    },
+    {
+      "symbol": "AU",
+      "last": "2021-10-18 15:00:00",
+      "file": "data/AU9999.XSGE.csv",
+      "sha256": "f542d7af8f2c422fe52e307e6e0ae198470d973dc50d2789f1dd02f20a038caf"
+    }
+  ],
+  "code_sha256": {
+    "/home/egorzobkov/cmf/MFT_HW/src/defensive_allocation.py": "978f2decb93aba07d09468da97e078a062af346f0534ada4b749f6c615831b2c",
+    "src/positive_revision.py": "6e09f271d403ff56a654c6aa0bd8f9a228b66c0979c89b8c33f430a1b62200b7",
+    "src/portfolio_engine.py": "758369b9dd0fc7ec08b36cba3277f7eb058eb53dafb335e67106ac0420593bbd",
+    "src/universe_research.py": "1c242c052ca05a2d74503d2da93ef4382f9a4bcf25869bce6f518b9b1d94c0cd",
+    "src/daily_universe_research.py": "4f9461acc69cacccac6603a16029eb414040808d5282c1a3e3a6626c001ed349",
+    "configs/defensive_allocation.json": "59ba120c2d63221a9588958803588d38d04a91e6b91664e5ab64c78dac66f147",
+    "configs/positive_revision.json": "8b559af9b91298d259b0e0fdaac5a685fcc55717ecdbe07761c8cebffb62b40f"
+  }
+}

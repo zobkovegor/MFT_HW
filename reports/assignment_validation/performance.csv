@@ -1,0 +1,2 @@
+days,elapsed_days,final_equity_cny,total_return_pct,annualized_return_pct,sharpe,max_drawdown_pct,trades,win_rate_pct,max_margin_pct,margin_breaches,forced_margin_exits,drawdown_marks,primary_pass,all_required_pass,period,selected_on_validation,independent_holdout
+261,365,3606596.023500018,20.219867450000596,20.235031928355298,2.5090023564065866,5.701397996441726,661,54.91679273827535,59.80513796793541,0,0,minute_close,True,True,validation_2019,True,False

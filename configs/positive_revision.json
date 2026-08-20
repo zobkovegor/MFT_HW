@@ -1,0 +1,54 @@
+{
+  "created_utc": "2026-10-06T16:26:26.377766+00:00",
+  "retrospective": true,
+  "earlier_test_seen": true,
+  "test_pnl_filter": false,
+  "cost_screen": "original candidates; positive train+2019 with 3 ticks per side; >=2 positive train years and >=3 available years; >=20 validation trades",
+  "breakout_screen": "12 markets x 2 ranges x 2 trend filters x 2 buffers; positive train+2019 with 2 ticks; >=3 positive train years; >=100/30 trades",
+  "risk": {
+    "initial_capital": 3000000.0,
+    "risk_fraction": 0.005,
+    "per_asset_margin": 0.2,
+    "total_margin": 0.4,
+    "volume_participation": 0.01,
+    "oi_participation": 0.01,
+    "volatility_floor": 0.005,
+    "margin_rate": 0.2
+  },
+  "candidates": [
+    {
+      "symbol": "NI",
+      "family": "daily_trend",
+      "timeframe": 5,
+      "lookback": 20,
+      "holding": 0,
+      "quantile": 0.5,
+      "side": "short",
+      "candidate_id": "NI:daily_trend:5",
+      "train_threshold": 0.04988312817769577,
+      "revision": "cost_screen"
+    },
+    {
+      "symbol": "AU",
+      "family": "daily_reversal",
+      "timeframe": 5,
+      "lookback": 60,
+      "holding": 0,
+      "quantile": 0.5,
+      "side": "long",
+      "candidate_id": "AU:daily_reversal:5",
+      "train_threshold": 0.025293401868763103,
+      "revision": "cost_screen"
+    },
+    {
+      "symbol": "SN",
+      "family": "range_breakout",
+      "timeframe": 5,
+      "range_minutes": 60,
+      "trend_days": 20,
+      "buffer": 0.0,
+      "revision": "range_breakout",
+      "candidate_id": "SN:ORB:60:20:0.0"
+    }
+  ]
+}

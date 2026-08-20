@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-10-06T16:36:02.093465+00:00",
+  "retrospective": true,
+  "earlier_test_seen": true,
+  "test_used_in_weight_function": false,
+  "primary_book": "training_loss_weighted",
+  "comparison_book": "maximin_single",
+  "single_symbol": "AU",
+  "risk": {
+    "initial_capital": 3000000.0,
+    "risk_fraction": 0.005,
+    "per_asset_margin": 0.2,
+    "total_margin": 0.4,
+    "volume_participation": 0.01,
+    "oi_participation": 0.01,
+    "volatility_floor": 0.005,
+    "margin_rate": 0.2
+  },
+  "weights": {
+    "NI": 0.697767477533092,
+    "AU": 1.0
+  },
+  "candidates": [
+    {
+      "symbol": "NI",
+      "family": "daily_trend",
+      "timeframe": 5,
+      "lookback": 20,
+      "holding": 0,
+      "quantile": 0.5,
+      "side": "short",
+      "candidate_id": "NI:daily_trend:5",
+      "train_threshold": 0.04988312817769577,
+      "revision": "cost_screen"
+    },
+    {
+      "symbol": "AU",
+      "family": "daily_reversal",
+      "timeframe": 5,
+      "lookback": 60,
+      "holding": 0,
+      "quantile": 0.5,
+      "side": "long",
+      "candidate_id": "AU:daily_reversal:5",
+      "train_threshold": 0.025293401868763103,
+      "revision": "cost_screen"
+    }
+  ],
+  "allocation": "weight = smallest worst-year loss severity / asset worst-year loss severity; train 2015-18 at 3 ticks per side; weights <= 1; no risk increase"
+}

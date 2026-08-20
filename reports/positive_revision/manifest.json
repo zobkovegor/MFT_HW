@@ -1,0 +1,84 @@
+{
+  "created_utc": "2026-10-06T16:26:33.426160+00:00",
+  "config": {
+    "created_utc": "2026-10-06T16:26:26.377766+00:00",
+    "retrospective": true,
+    "earlier_test_seen": true,
+    "test_pnl_filter": false,
+    "cost_screen": "original candidates; positive train+2019 with 3 ticks per side; >=2 positive train years and >=3 available years; >=20 validation trades",
+    "breakout_screen": "12 markets x 2 ranges x 2 trend filters x 2 buffers; positive train+2019 with 2 ticks; >=3 positive train years; >=100/30 trades",
+    "risk": {
+      "initial_capital": 3000000.0,
+      "risk_fraction": 0.005,
+      "per_asset_margin": 0.2,
+      "total_margin": 0.4,
+      "volume_participation": 0.01,
+      "oi_participation": 0.01,
+      "volatility_floor": 0.005,
+      "margin_rate": 0.2
+    },
+    "candidates": [
+      {
+        "symbol": "NI",
+        "family": "daily_trend",
+        "timeframe": 5,
+        "lookback": 20,
+        "holding": 0,
+        "quantile": 0.5,
+        "side": "short",
+        "candidate_id": "NI:daily_trend:5",
+        "train_threshold": 0.04988312817769577,
+        "revision": "cost_screen"
+      },
+      {
+        "symbol": "AU",
+        "family": "daily_reversal",
+        "timeframe": 5,
+        "lookback": 60,
+        "holding": 0,
+        "quantile": 0.5,
+        "side": "long",
+        "candidate_id": "AU:daily_reversal:5",
+        "train_threshold": 0.025293401868763103,
+        "revision": "cost_screen"
+      },
+      {
+        "symbol": "SN",
+        "family": "range_breakout",
+        "timeframe": 5,
+        "range_minutes": 60,
+        "trend_days": 20,
+        "buffer": 0.0,
+        "revision": "range_breakout",
+        "candidate_id": "SN:ORB:60:20:0.0"
+      }
+    ]
+  },
+  "data": [
+    {
+      "symbol": "NI",
+      "path": "data/NI9999.XSGE.csv",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "98576b64c2e40d06cc998d404ede316c241f7efae68156db2a9aefbb49d53089"
+    },
+    {
+      "symbol": "AU",
+      "path": "data/AU9999.XSGE.csv",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "f542d7af8f2c422fe52e307e6e0ae198470d973dc50d2789f1dd02f20a038caf"
+    },
+    {
+      "symbol": "SN",
+      "path": "data/SN9999.XSGE.csv",
+      "last": "2021-10-18 15:00:00",
+      "sha256": "45cb5f03ef51c6845655dd6a12ff741641f7f220943009d058d3d2d332a246c5"
+    }
+  ],
+  "code_sha256": {
+    "/home/egorzobkov/cmf/MFT_HW/src/positive_revision.py": "9745be4bb3c4a0395db942447ad0aef5a7e40ab6259f18effe757d96f27fabb0",
+    "src/portfolio_engine.py": "758369b9dd0fc7ec08b36cba3277f7eb058eb53dafb335e67106ac0420593bbd",
+    "src/universe_research.py": "1c242c052ca05a2d74503d2da93ef4382f9a4bcf25869bce6f518b9b1d94c0cd",
+    "src/daily_universe_research.py": "4f9461acc69cacccac6603a16029eb414040808d5282c1a3e3a6626c001ed349",
+    "configs/positive_revision.json": "8b559af9b91298d259b0e0fdaac5a685fcc55717ecdbe07761c8cebffb62b40f"
+  }
+}

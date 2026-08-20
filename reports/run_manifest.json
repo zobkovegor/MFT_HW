@@ -1,0 +1,37 @@
+{
+  "config": {
+    "signal_quantile": 0.8,
+    "slippage_ticks_per_side": 1,
+    "initial_capital": 3000000,
+    "risk_fraction": 0.005,
+    "max_trade_margin_fraction": 0.2,
+    "max_portfolio_margin_fraction": 0.6,
+    "max_contracts": 20,
+    "fee_scenario": "historical_proxy",
+    "max_portfolio_risk_fraction": 0.015,
+    "volatility_window": 20,
+    "volatility_min_observations": 15,
+    "volatility_floor": 0.001,
+    "bootstrap_seed": 42,
+    "bootstrap_repetitions": 1000,
+    "bootstrap_block_days": 5
+  },
+  "data_sha256": {
+    "data/IF9999.CCFX.csv": "c7350ca8ba157b836214c80d0ee6f024b4454b82aef2927a8e74a495fa3e3794",
+    "data/IC9999.CCFX.csv": "99ddb919641c36698455edba7998235e18150ebc4fcc3423d6f9d0627d0ac69a",
+    "data/IH9999.CCFX.csv": "bcc9cbe3b56604d10534e9695e88ef3993022ee4c287a4d1394ca713ae9e02fc"
+  },
+  "code_sha256": {
+    "src/opening_move_final.py": "7dd2b74c128fcd2287772c6ea620c6c4fd64bef89f75cc0a8e4eec284106bcb7",
+    "src/project_report.py": "e8e064349cf3c2a55cba7401595b861966c5bfe52f871f44bbde7ee942412421",
+    "src/data_loader.py": "a16f2bdfab608cdb4e3922779782d65e00418a2a8d60adabcc66e0cf0ea0a6d6",
+    "src/bar_builder.py": "59690e74d679e44bb09df468ca0e4f570219b24bf35a51dd14c4e77f5b47454e"
+  },
+  "packages": {
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.1",
+    "nbclient": "0.11.0",
+    "nbformat": "5.11.0"
+  }
+}

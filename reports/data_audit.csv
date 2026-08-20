@@ -1,0 +1,10 @@
+period,instrument,observed_days,eligible_days,mixed_contract_days,incomplete_days,raw_signals,accepted_trades
+test,IC,432,410,0,0,30,9
+test,IF,432,410,0,0,42,10
+test,IH,432,410,0,0,52,34
+train,IC,908,863,8,0,87,23
+train,IF,975,927,12,0,78,28
+train,IH,908,863,8,0,67,36
+validation,IC,244,232,0,0,18,11
+validation,IF,244,232,0,0,14,7
+validation,IH,244,232,0,0,18,13

@@ -1,0 +1,32 @@
+{
+  "timeframes": [
+    5,
+    15,
+    30
+  ],
+  "lookbacks": [
+    1,
+    4
+  ],
+  "holdings": [
+    1,
+    4,
+    0
+  ],
+  "quantiles": [
+    0.8,
+    0.95
+  ],
+  "families": [
+    "reversal",
+    "momentum"
+  ],
+  "sides": [
+    "long",
+    "short"
+  ],
+  "slippage_ticks_per_side": 1,
+  "selection": "positive train/validation, minimum t-stat, one per instrument",
+  "test_used_for_selection": false,
+  "fee_source": "literal supplied workbook (2026 snapshot)"
+}

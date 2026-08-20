@@ -1,0 +1,183 @@
+{
+  "created_utc": "2026-10-06T15:39:24.717442+00:00",
+  "selection_periods": [
+    "train",
+    "validation"
+  ],
+  "evaluation_used_for_selection": false,
+  "policy": "positive mean both periods; >=100/30 signals; min t>=0.5; one per asset; positive capital PnL both; >=10 filled validation trades",
+  "configurations_searched": 17290,
+  "registries_sha256": {
+    "reports/universe/candidate_registry.csv": "a5fc600f1527d160cc052c6d59efc41298420ffde28445698f1c851465a55c2c",
+    "reports/opening_universe/candidate_registry.csv": "10e2bdfb4e256982b7f17bd4330f49c221711f70130542c797185c07d3ae5004",
+    "reports/daily_universe/candidate_registry.csv": "aad81da26dfe107238be738b7396ee397dc7ff68f2a8aa2f1efdc8f9d5ede50d"
+  },
+  "risk": {
+    "initial_capital": 3000000.0,
+    "risk_fraction": 0.01,
+    "per_asset_margin": 0.3,
+    "total_margin": 0.6,
+    "volume_participation": 0.01,
+    "oi_participation": 0.01,
+    "volatility_floor": 0.005,
+    "margin_rate": 0.2
+  },
+  "slippage_ticks_per_side": 1,
+  "fees": "literal supplied 2026 workbook; NOT reconstructed historical fees",
+  "candidates": [
+    {
+      "symbol": "NI",
+      "family": "daily_trend",
+      "timeframe": 5,
+      "lookback": 20,
+      "holding": 0,
+      "quantile": 0.5,
+      "side": "short",
+      "candidate_id": "NI:daily_trend:5",
+      "train_threshold": 0.04988312817769577
+    },
+    {
+      "symbol": "AU",
+      "family": "daily_reversal",
+      "timeframe": 5,
+      "lookback": 60,
+      "holding": 0,
+      "quantile": 0.5,
+      "side": "long",
+      "candidate_id": "AU:daily_reversal:5",
+      "train_threshold": 0.025293401868763103
+    },
+    {
+      "symbol": "T",
+      "family": "opening_reversal",
+      "timeframe": 5,
+      "lookback": 1,
+      "holding": 0,
+      "quantile": 0.8,
+      "side": "long",
+      "candidate_id": "T:opening_reversal:5",
+      "train_threshold": 0.0010087025512315775
+    },
+    {
+      "symbol": "RU",
+      "family": "daily_reversal",
+      "timeframe": 5,
+      "lookback": 20,
+      "holding": 0,
+      "quantile": 0.5,
+      "side": "short",
+      "candidate_id": "RU:daily_reversal:5",
+      "train_threshold": 0.05294534712064446
+    },
+    {
+      "symbol": "OI",
+      "family": "reversal",
+      "timeframe": 30,
+      "lookback": 1,
+      "holding": 1,
+      "quantile": 0.95,
+      "side": "short",
+      "candidate_id": "OI:reversal:30",
+      "train_threshold": 0.00535467701440056
+    },
+    {
+      "symbol": "CY",
+      "family": "reversal",
+      "timeframe": 30,
+      "lookback": 1,
+      "holding": 0,
+      "quantile": 0.8,
+      "side": "short",
+      "candidate_id": "CY:reversal:30",
+      "train_threshold": 0.002739849945781402
+    },
+    {
+      "symbol": "SM",
+      "family": "reversal",
+      "timeframe": 5,
+      "lookback": 1,
+      "holding": 4,
+      "quantile": 0.95,
+      "side": "short",
+      "candidate_id": "SM:reversal:5",
+      "train_threshold": 0.005638890373764743
+    },
+    {
+      "symbol": "AP",
+      "family": "momentum",
+      "timeframe": 5,
+      "lookback": 4,
+      "holding": 0,
+      "quantile": 0.95,
+      "side": "long",
+      "candidate_id": "AP:momentum:5",
+      "train_threshold": 0.008897899682711945
+    },
+    {
+      "symbol": "ZN",
+      "family": "daily_opening_momentum",
+      "timeframe": 5,
+      "lookback": 1,
+      "holding": 0,
+      "quantile": 0.5,
+      "side": "short",
+      "candidate_id": "ZN:daily_opening_momentum:5",
+      "train_threshold": 0.005425878664487294
+    },
+    {
+      "symbol": "JD",
+      "family": "daily_trend",
+      "timeframe": 5,
+      "lookback": 20,
+      "holding": 0,
+      "quantile": 0.5,
+      "side": "short",
+      "candidate_id": "JD:daily_trend:5",
+      "train_threshold": 0.035225484968779794
+    },
+    {
+      "symbol": "SN",
+      "family": "opening_reversal",
+      "timeframe": 30,
+      "lookback": 1,
+      "holding": 0,
+      "quantile": 0.8,
+      "side": "short",
+      "candidate_id": "SN:opening_reversal:30",
+      "train_threshold": 0.003669107135957985
+    },
+    {
+      "symbol": "SF",
+      "family": "daily_opening_reversal",
+      "timeframe": 5,
+      "lookback": 1,
+      "holding": 0,
+      "quantile": 0.5,
+      "side": "short",
+      "candidate_id": "SF:daily_opening_reversal:5",
+      "train_threshold": 0.004754030048924551
+    },
+    {
+      "symbol": "AL",
+      "family": "daily_opening_momentum",
+      "timeframe": 5,
+      "lookback": 1,
+      "holding": 0,
+      "quantile": 0.5,
+      "side": "short",
+      "candidate_id": "AL:daily_opening_momentum:5",
+      "train_threshold": 0.0032697548762871675
+    },
+    {
+      "symbol": "CF",
+      "family": "daily_opening_momentum",
+      "timeframe": 5,
+      "lookback": 1,
+      "holding": 0,
+      "quantile": 0.5,
+      "side": "short",
+      "candidate_id": "CF:daily_opening_momentum:5",
+      "train_threshold": 0.0034456355283307705
+    }
+  ]
+}

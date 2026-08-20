@@ -1,0 +1,5 @@
+metric,target,actual,passed,required
+"Annualized return, %",>20,20.235031928355298,True,True
+Sharpe,>1.5,2.5090023564065866,True,True
+"Minute-close max DD, %",<15,5.701397996441726,True,True
+"Win rate, %",>50 (optional),54.91679273827535,True,False
